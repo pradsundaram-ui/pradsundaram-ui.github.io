@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Name</title>
-<meta name="description" content="Bio, reel and filmography of Your Name.">
+<title>Pradeep Sundaram</title>
+<meta name="description" content="Bio, reel and filmography of Pradeep Sundaram.">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#ffffff; --ink:#444444; --muted:#707070; --accent:#d62f63; --line:#e3e3e3; --tint:#f0f0f0;
+  :root { --bg:#ffffff; --ink:#444444; --muted:#707070; --accent:#0a8a94; --line:#e3e3e3; --tint:#f0f0f0;
     --serif:"Fraunces",Georgia,serif; --sans:"Figtree","Helvetica Neue",Arial,sans-serif; }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--ink); font:1.125rem/1.65 var(--sans); }
@@ -23,7 +23,7 @@
   nav a:hover { color:var(--accent); }
 
   .bio { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:3rem; padding:4rem 0; align-items:start; }
-  .photo { position:relative; aspect-ratio:4/5; background:var(--tint); border-radius:0.75rem; overflow:hidden;
+  .photo { position:relative; width:100%; aspect-ratio:1/1; background:var(--tint); border-radius:50%; overflow:hidden;
     display:grid; place-items:center; color:var(--muted); font-size:1rem; }
   .photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
   .bio h1 { margin:0 0 0.5rem; font:700 clamp(2.5rem,7vw,4.5rem)/1 var(--serif); letter-spacing:-0.02em; }
@@ -34,9 +34,12 @@
   .btn:hover { filter:brightness(1.1); }
   .btn:focus-visible { outline-color:var(--ink); }
 
+  .cv { padding:0 0 3rem; }
+  .cv-icon { font-weight:600; font-size:1.05rem; text-decoration:none; display:inline-grid; place-items:center; width:3.5rem; height:3.5rem; border-radius:50%; background:var(--accent); color:#fff; }
+  .cv-icon:hover { filter:brightness(1.1); }
+  .cv-icon:focus-visible { outline:3px solid var(--ink); outline-offset:3px; }
   .reel { padding:3rem 0 4rem; border-top:1px solid var(--line); }
-  .reel h2 { margin:0 0 2rem; font:700 2rem var(--serif); }
-  .videos { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+  .videos { display:grid; grid-template-columns:1fr; gap:2.5rem; max-width:48rem; }
   .video { position:relative; aspect-ratio:16/9; background:var(--tint); border-radius:0.75rem; overflow:hidden;
     display:grid; place-items:center; color:var(--muted); font-size:1rem; text-align:center; padding:1rem; }
   .video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
@@ -44,13 +47,13 @@
   figure { margin:0; }
 
   footer { padding:2rem 0 3rem; border-top:1px solid var(--line); color:var(--muted); font-size:0.95rem; }
-  @media (max-width:46rem) { .bio { grid-template-columns:1fr; gap:2rem; padding:2.5rem 0; } .photo { max-width:22rem; } .videos { grid-template-columns:1fr; } }
+  @media (max-width:46rem) { .bio { grid-template-columns:1fr; gap:2rem; padding:2.5rem 0; } .photo { max-width:22rem; } }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <strong>Your Name</strong>
+    <strong>Pradeep Sundaram</strong>
     <nav aria-label="Main">
       <a href="index.html" aria-current="page">Home</a>
       <a href="filmography.html">Filmography</a>
@@ -64,23 +67,26 @@
   <section class="bio">
     <div class="photo">
       <span>Your photo (photo.jpg)</span>
-      <img src="photo.jpg" alt="Portrait of Your Name" onerror="this.remove()">
+      <img src="photo.jpg" alt="Portrait of Pradeep Sundaram" onerror="this.remove()">
     </div>
     <div>
-      <h1>Your Name</h1>
+      <h1>Pradeep Sundaram</h1>
       <p class="role">[Your role, e.g. actor, director, editor]</p>
       <p>Write your biography here. Start with who you are and what you do, then where you trained or got started.</p>
       <p>Add a few highlights: notable productions, awards, or the kind of roles and projects you want to work on next.</p>
-      <a class="btn" href="mailto:you@example.com">Get in touch</a>
-      <a class="btn" href="filmography.html" style="background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink);margin-left:0.5rem">See filmography</a>
+      <a class="btn" href="filmography.html" style="background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)">See filmography</a>
     </div>
   </section>
+
+  <!-- CV. Upload your Word document to the repository named cv.docx -->
+  <div class="cv">
+    <a class="cv-icon" href="cv.docx" download aria-label="Download my CV (Word document)" title="Download my CV">CV</a>
+  </div>
 
   <!-- VIDEOS. Paste an embed link into data-src, e.g.
        YouTube: https://www.youtube.com/embed/VIDEO_ID
        Vimeo:   https://player.vimeo.com/video/VIDEO_ID -->
   <section class="reel">
-    <h2>Watch</h2>
     <div class="videos">
       <figure>
         <div class="video" data-src="" data-title="Video one"><span>Video 1: paste your embed link in data-src</span></div>
@@ -94,7 +100,7 @@
   </section>
 </main>
 
-<footer><div class="wrap">&copy; 2026 Your Name</div></footer>
+<footer><div class="wrap">&copy; 2026 Pradeep Sundaram</div></footer>
 
 <script>
   document.querySelectorAll('.video[data-src]').forEach(function (box) {
