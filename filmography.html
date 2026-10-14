@@ -53,6 +53,9 @@
   .grid { list-style:none; margin:0; padding:2rem 0 4rem; display:grid; grid-template-columns:repeat(auto-fill,minmax(11rem,1fr)); gap:2rem 1.5rem; }
   .poster { position:relative; aspect-ratio:2/3; background:var(--tint); border-radius:0.5rem; overflow:hidden;
     display:grid; place-items:center; color:var(--muted); font-size:0.95rem; box-shadow:0 6px 18px rgba(0,0,0,.15); }
+  .poster { transition:transform .25s ease, box-shadow .25s ease; }
+  .grid li:hover .poster { transform:scale(1.07); box-shadow:0 14px 30px rgba(0,0,0,.28); z-index:2; }
+  @media (prefers-reduced-motion: reduce) { .poster { transition:none; } .grid li:hover .poster { transform:none; } }
   .poster img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
   .grid h2 { margin:0.9rem 0 0.1rem; font:700 1.05rem/1.3 var(--serif); }
 </style>
