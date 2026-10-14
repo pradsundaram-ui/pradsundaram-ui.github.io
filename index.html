@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pradeep Sundaram</title>
 <meta name="description" content="Bio, reel and filmography of Pradeep Sundaram.">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root { --bg:#ffffff; --ink:#444444; --muted:#707070; --accent:#0a8a94; --line:#e3e3e3; --tint:#f0f0f0;
     --serif:"Fraunces",Georgia,serif; --sans:"Figtree","Helvetica Neue",Arial,sans-serif; }
@@ -25,7 +25,7 @@
 
   .bio h2 { margin:0 0 1rem; font:700 2rem/1.1 var(--serif); }
   .bio { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:3rem; padding:4rem 0; align-items:start; }
-  .photo { position:relative; width:100%; aspect-ratio:1/1; background:var(--tint); border-radius:50%; overflow:hidden;
+  .photo { position:relative; width:100%; aspect-ratio:1/1; background:var(--tint); border-radius:50%; border:4px solid var(--accent); overflow:hidden;
     display:grid; place-items:center; color:var(--muted); font-size:1rem; }
   .photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
   .bio p { max-width:36rem; margin:0 0 1rem; }
@@ -43,7 +43,8 @@
   .video { position:relative; aspect-ratio:16/9; background:var(--tint); border-radius:0.75rem; overflow:hidden;
     display:grid; place-items:center; color:var(--muted); font-size:1rem; text-align:center; padding:1rem; }
   .video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
-  figcaption { margin:0 0 0.75rem; color:var(--ink); font:700 1.25rem/1.3 var(--serif); }
+  figcaption { display:inline-block; margin:0 0 1rem; padding:0 3rem 0.15rem 0; color:var(--ink); font:400 1.25rem/1.3 var(--serif);
+    text-transform:uppercase; letter-spacing:0.05em; border-bottom:1.5px solid rgba(10,138,148,0.5); }
   figure { margin:0; }
 
   footer { padding:2rem 0 3rem; border-top:1px solid var(--line); color:var(--muted); font-size:0.95rem; }
@@ -74,10 +75,10 @@
     </div>
     <div>
       <h2>About me</h2>
-      <p>Starting my career in Australia in 2016 at Rotor Studios, Animal Logic, Iloura, and Luma Pictures, I developed a versatile generalist toolkit. I spent three and a half years at ILM before relocating to ILM London to continue pushing my creative boundaries.</p>
+      <p>Starting my career in Australia in 2016 at Rotor Studios, Animal Logic, Iloura, and Luma Pictures, I developed a versatile generalist toolkit. I spent three and a half years at ILM Sydney before relocating to ILM London to continue pushing my creative boundaries.</p>
       <p>My work includes key contributions to major IPs across DC, Disney, and Marvel Studios, including Aquaman, Wicked, Spider-Man, Thor, and Avengers.</p>
       <p>At my core, I am a problem solver who thrives on continuous growth and artistic excellence. My ultimate goal on any team is simple: to be the reliable, versatile go-to artist who gets the job done seamlessly, no matter the scale or complexity.</p>
-      <a class="btn" href="filmography.html" style="background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)">See filmography</a>
+      <a class="btn" href="filmography.html">See filmography</a>
     </div>
   </section>
 
@@ -92,8 +93,8 @@
   <section class="reel">
     <div class="videos">
       <figure>
-        <figcaption>Title of the first video</figcaption>
-        <div class="video" data-src="" data-title="Video one"><span>Video 1: paste your embed link in data-src</span></div>
+        <figcaption>VFX Showreel</figcaption>
+        <div class="video" data-src="https://player.vimeo.com/video/1235665207" data-title="Video one"><span>Video 1: paste your embed link in data-src</span></div>
       </figure>
       <figure>
         <figcaption>Title of the second video</figcaption>
