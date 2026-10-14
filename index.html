@@ -15,8 +15,13 @@
   a:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
   .wrap { max-width:62rem; margin:0 auto; padding:0 1.5rem; }
   header { padding:1.5rem 0; border-bottom:1px solid var(--line); }
-  header .wrap { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
+  header .wrap { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap; }
   .brand h1 { margin:0; font:700 1.25rem/1.2 var(--serif); }
+  .links { display:flex; gap:0.5rem; margin-top:0.75rem; }
+  .cv-icon { display:inline-grid; place-items:center; width:2.8rem; height:2.8rem; border-radius:50%; background:var(--ink); color:#fff;
+    font-weight:600; font-size:0.84rem; text-decoration:none; }
+  .cv-icon:hover { filter:brightness(1.35); }
+  .cv-icon:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
   .brand-role { margin:0.15rem 0 0; color:var(--accent); font-weight:600; font-size:1rem; }
   nav { display:flex; gap:1.5rem; }
   nav a { color:var(--ink); text-decoration:none; font-weight:500; padding-bottom:2px; }
@@ -34,10 +39,6 @@
   .btn:hover { filter:brightness(1.1); }
   .btn:focus-visible { outline-color:var(--ink); }
 
-  .cv { padding:0 0 3rem; }
-  .cv-icon { font-weight:600; font-size:1.05rem; text-decoration:none; display:inline-grid; place-items:center; width:3.5rem; height:3.5rem; border-radius:50%; background:var(--accent); color:#fff; }
-  .cv-icon:hover { filter:brightness(1.1); }
-  .cv-icon:focus-visible { outline:3px solid var(--ink); outline-offset:3px; }
   .reel { padding:3rem 0 4rem; border-top:1px solid var(--line); }
   .videos { display:grid; grid-template-columns:1fr; gap:2.5rem; max-width:48rem; }
   .video { position:relative; aspect-ratio:16/9; background:var(--tint); border-radius:0.75rem; overflow:hidden;
@@ -57,6 +58,11 @@
     <div class="brand">
       <h1>Pradeep Sundaram</h1>
       <p class="brand-role">CG Generalist</p>
+      <!-- Buttons. Upload your Word CV as cv.docx; replace the LinkedIn address with your own profile link. -->
+      <div class="links">
+        <a class="cv-icon" href="cv.docx" download aria-label="Download my CV (Word document)" title="Download my CV">CV</a>
+        <a class="cv-icon" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">in</a>
+      </div>
     </div>
     <nav aria-label="Main">
       <a href="index.html" aria-current="page">Home</a>
@@ -78,14 +84,8 @@
       <p>Starting my career in Australia in 2016 at Rotor Studios, Animal Logic, Iloura, and Luma Pictures, I developed a versatile generalist toolkit. I spent three and a half years at ILM Sydney before relocating to ILM London to continue pushing my creative boundaries.</p>
       <p>My work includes key contributions to major IPs across DC, Disney, and Marvel Studios, including Aquaman, Wicked, Spider-Man, Thor, and Avengers.</p>
       <p>At my core, I am a problem solver who thrives on continuous growth and artistic excellence. My ultimate goal on any team is simple: to be the reliable, versatile go-to artist who gets the job done seamlessly, no matter the scale or complexity.</p>
-      <a class="btn" href="filmography.html">See filmography</a>
     </div>
   </section>
-
-  <!-- CV. Upload your Word document to the repository named cv.docx -->
-  <div class="cv">
-    <a class="cv-icon" href="cv.docx" download aria-label="Download my CV (Word document)" title="Download my CV">CV</a>
-  </div>
 
   <!-- VIDEOS. Paste an embed link into data-src, e.g.
        YouTube: https://www.youtube.com/embed/VIDEO_ID
