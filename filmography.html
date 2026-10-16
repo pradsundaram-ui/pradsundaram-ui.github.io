@@ -14,9 +14,10 @@
   a { color:var(--accent); text-underline-offset:3px; }
   a:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
   .wrap { max-width:62rem; margin:0 auto; padding:0 1.5rem; }
-  header { padding:1.5rem 0; border-bottom:1px solid var(--line); }
-  header .wrap { display:flex; justify-content:space-between; align-items:baseline; gap:1rem; flex-wrap:wrap; }
-  header strong { font:700 1.25rem var(--serif); }
+  header { padding:1.5rem 0; background:#f3f3f3; border-top:4px solid var(--accent); }
+  header .wrap { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
+  header strong { display:block; font:700 1.25rem/1.2 var(--serif); }
+  .brand-role { margin:0.15rem 0 0; color:var(--accent); font-weight:600; font-size:1rem; }
   nav { display:flex; gap:1.5rem; }
   nav a { color:var(--ink); text-decoration:none; font-weight:500; padding-bottom:2px; }
   nav a[aria-current="page"] { border-bottom:2px solid var(--accent); }
@@ -62,7 +63,10 @@
 <body>
 <header>
   <div class="wrap">
-    <strong>Pradeep Sundaram</strong>
+    <div class="brand">
+      <strong>Pradeep Sundaram</strong>
+      <p class="brand-role">CG Generalist</p>
+    </div>
     <nav aria-label="Main">
       <a href="index.html">Home</a>
       <a href="filmography.html" aria-current="page">Filmography</a>

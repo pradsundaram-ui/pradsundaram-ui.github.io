@@ -14,7 +14,7 @@
   a { color:var(--accent); text-underline-offset:3px; }
   a:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
   .wrap { max-width:62rem; margin:0 auto; padding:0 1.5rem; }
-  header { padding:1.5rem 0; border-bottom:1px solid var(--line); }
+  header { padding:1.5rem 0; background:#f3f3f3; border-top:4px solid var(--accent); }
   header .wrap { display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap; }
   .brand h1 { margin:0; font:700 1.25rem/1.2 var(--serif); }
   .links { display:flex; gap:0.5rem; margin-top:0.75rem; }
@@ -60,7 +60,7 @@
       <p class="brand-role">CG Generalist</p>
       <!-- Buttons. Upload your Word CV as cv.docx; replace the LinkedIn address with your own profile link. -->
       <div class="links">
-        <a class="cv-icon" href="cv.docx" download aria-label="Download my CV (Word document)" title="Download my CV">CV</a>
+        <a class="cv-icon" id="cv-link" href="cv.docx" download aria-label="Download my CV (Word document)" title="Download my CV">CV</a>
         <a class="cv-icon" href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener" aria-label="LinkedIn profile" title="LinkedIn">in</a>
       </div>
     </div>
@@ -84,6 +84,7 @@
       <p>Starting my career in Australia in 2016 at Rotor Studios, Animal Logic, Iloura, and Luma Pictures, I developed a versatile generalist toolkit. I spent three and a half years at ILM Sydney before relocating to ILM London to continue pushing my creative boundaries.</p>
       <p>My work includes key contributions to major IPs across DC, Disney, and Marvel Studios, including Aquaman, Wicked, Spider-Man, Thor, and Avengers.</p>
       <p>At my core, I am a problem solver who thrives on continuous growth and artistic excellence. My ultimate goal on any team is simple: to be the reliable, versatile go-to artist who gets the job done seamlessly, no matter the scale or complexity.</p>
+      <a class="btn" href="filmography.html">See filmography</a>
     </div>
   </section>
 
@@ -119,6 +120,16 @@
     f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen';
     box.appendChild(f);
   });
+</script>
+<script>
+  // CV button: uses cv.pdf if it exists in the repository, otherwise cv.docx
+  (function () {
+    var link = document.getElementById('cv-link');
+    if (!link) return;
+    fetch('cv.pdf', { method: 'HEAD' }).then(function (r) {
+      if (r.ok) { link.href = 'cv.pdf'; link.removeAttribute('download'); }
+    }).catch(function () {});
+  })();
 </script>
 </body>
 </html>
